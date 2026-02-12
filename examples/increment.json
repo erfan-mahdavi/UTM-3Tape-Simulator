@@ -1,0 +1,22 @@
+{
+  "description": "Unary Increment Machine (Slide 38)",
+  "initial_state": "q1",
+  "transitions": [
+    {
+      "comment": "Rule A: If 1, scan right",
+      "q": "q1",
+      "read": "1",
+      "next_q": "q1",
+      "write": "1",
+      "move": "R"
+    },
+    {
+      "comment": "Rule B: If blank, write 1 and halt (move to q2)",
+      "q": "q1",
+      "read": "_",
+      "next_q": "q2",
+      "write": "1",
+      "move": "L"
+    }
+  ]
+}
